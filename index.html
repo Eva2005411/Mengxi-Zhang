@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张梦喜喜语录 | 互相伤害吧！</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-fire"></i> 摸鱼聊天室</h1>
+            <p class="subtitle">没活干好无聊</p>
+            <div class="user-info">
+                <div class="user-setup">
+                    <input type="text" id="username" placeholder="输入你的损友代号...">
+                    <button id="join-btn">加入战场</button>
+                </div>
+                <div id="current-user" class="hidden">
+                    <span id="display-name"></span>
+                    <button id="leave-btn">退出</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <h3><i class="fas fa-users"></i> 在线鱼友</h3>
+                    <ul id="user-list"></ul>
+                    <div class="features">
+                        <h4><i class="fas fa-magic"></i> 伤害功能</h4>
+                        <div class="feature-buttons">
+                            <button class="feature-btn" data-action="roast">
+                                <i class="fas fa-bolt"></i> 随机吐槽
+                            </button>
+                            <button class="feature-btn" data-action="meme">
+                                <i class="fas fa-image"></i> 发送梗图
+                            </button>
+                            <button class="feature-btn" data-action="sound">
+                                <i class="fas fa-volume-up"></i> 音效攻击
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-main">
+                    <div class="messages" id="messages">
+                        <div class="system-message">
+                            <p>欢迎来到摸鱼聊天室！准备好互相伤害了吗？</p>
+                            <p>使用右边的功能按钮增加伤害值！</p>
+                        </div>
+                    </div>
+
+                    <div class="message-input">
+                        <div class="input-options">
+                            <button id="emoji-btn"><i class="far fa-smile"></i></button>
+                            <button id="gif-btn"><i class="fas fa-photo-video"></i></button>
+                            <button id="format-btn"><i class="fas fa-font"></i></button>
+                        </div>
+                        <input type="text" id="message-input" placeholder="输入你的毒舌言论..." disabled>
+                        <button id="send-btn" disabled><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>免责声明：本聊天室仅供娱乐，摸鱼被发现与作者无关，请谨慎使用！</p>
+            <p class="stats">在线人数: <span id="online-count">0</span> | 今日消息: <span id="message-count">0</span></p>
+        </footer>
+    </div>
+
+    <!-- 表情选择器 -->
+    <div id="emoji-picker" class="emoji-picker hidden">
+        <div class="emoji-category">
+            <span>😀 笑脸</span>
+            <div class="emoji-list">
+                <span>😀</span><span>😁</span><span>😂</span><span>🤣</span><span>😎</span>
+                <span>😏</span><span>😒</span><span>🙄</span><span>😤</span><span>😈</span>
+            </div>
+        </div>
+        <div class="emoji-category">
+            <span>👏 动作</span>
+            <div class="emoji-list">
+                <span>👏</span><span>🙌</span><span>👍</span><span>👎</span><span>🤝</span>
+                <span>💪</span><span>🤜</span><span>🤛</span><span>✊</span><span>👊</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="sound-effect" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-cartoon-trick-woosh-2903.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
